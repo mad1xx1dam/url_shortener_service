@@ -30,7 +30,7 @@ logging:
     root: info
 
 short-url:
-  base-url: http://${spring.data.redis.host}:${server.port}/api/v1/urls
+  base-url: ${SHORT_URL_BASE_URL:http://localhost:${server.port}/api/v1/urls}
 
   cache:
     ttl-minutes: 10
